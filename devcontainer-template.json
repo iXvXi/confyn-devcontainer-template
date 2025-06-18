@@ -1,0 +1,20 @@
+{
+  "id": "confyn-agent-dev",
+  "version": "1.0.0",
+  "name": "Confyn Agent Development Environment",
+  "description": "A complete, containerized environment for developing and interacting with code-aware agents on the Confyn platform. Includes language servers and all necessary tools.",
+  "documentationURL": "https://github.com/{your-org}/confyn-devcontainer-template",
+  "licenseURL": "https://github.com/{your-org}/confyn-devcontainer-template/blob/main/LICENSE",
+  "platforms": ["Go", "Python", "Node.js", "TypeScript"],
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "Select the base Python version for your environment.",
+      "proposals": [
+        "3.11",
+        "3.10"
+      ],
+      "default": "3.11"
+    }
+  }
+}
