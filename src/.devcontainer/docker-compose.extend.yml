@@ -1,0 +1,13 @@
+version: '3.8'
+
+# This file extends the main docker-compose.yml for a better development experience.
+services:
+  confyn-api:
+    # Mount the user's project root into the /workspace directory in the container.
+    # This allows the agent and LSP tools inside the container to access and modify project files.
+    volumes:
+      - ..:/workspace:cached
+
+    # Override the default command to keep the container running without starting the server.
+    # This allows the developer to start the server manually from the VS Code terminal for debugging.
+    command: sleep infinity
